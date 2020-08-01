@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resumes",
+  "info": {
+    "name": "Resumes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "resumes"
+    },
+    "BasicProfile": {
+      "type": "component",
+      "repeatable": false,
+      "component": "resume-sections.profile",
+      "required": true
+    },
+    "Objective": {
+      "type": "richtext"
+    },
+    "Declaration": {
+      "type": "richtext"
+    },
+    "Education": {
+      "type": "component",
+      "repeatable": true,
+      "component": "resume-sections.education"
+    },
+    "Experience": {
+      "type": "component",
+      "repeatable": true,
+      "component": "resume-sections.work-experience"
+    },
+    "Skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "resume-sections.skills"
+    },
+    "Portfolio": {
+      "type": "component",
+      "repeatable": true,
+      "component": "resume-sections.portfolio"
+    }
+  }
+}

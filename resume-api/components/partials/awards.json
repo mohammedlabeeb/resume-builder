@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_partials_awards",
+  "info": {
+    "name": "Awards",
+    "icon": "award"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Certificates": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<div class="container" DragAndDrop (fileDropped)="onFileDropped($event)">
+    <input
+        type="file"
+        #fileDropRef
+        id="fileDropRef"
+        multiple
+        (change)="fileBrowseHandler($event.target.files)"
+    />
+    <mat-icon color="primary">cloud_upload</mat-icon>
+    <h3>Drag and drop file here</h3>
+    <h3>or</h3>
+    <label for="fileDropRef">Browse for file</label>
+</div>
+<div class="files-list">
+    <div class="single-file" *ngFor="let file of files; let i = index">
+        <mat-icon color="primary">description</mat-icon>
+        <div class="info">
+            <h4 class="name">
+                {{ file?.name }}
+            </h4>
+            <p class="size">
+                {{ formatBytes(file?.size) }}
+            </p>
+            <mat-progress-bar
+                [color]="primary"
+                mode="determinate"
+                [value]="file?.progress"
+            >
+            </mat-progress-bar>
+        </div>
+        <button mat-icon-button color="warn" (click)="deleteFile(i)">
+            <mat-icon>delete_forever</mat-icon>
+        </button>
+    </div>
+</div>

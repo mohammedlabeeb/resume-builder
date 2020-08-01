@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_partials_online_profiles",
+  "info": {
+    "name": "OnlineProfiles",
+    "icon": "handshake"
+  },
+  "options": {},
+  "attributes": {
+    "Account": {
+      "type": "enumeration",
+      "enum": [
+        "Website",
+        "Skype",
+        "Whatsapp",
+        "Facebook",
+        "LinkedIn",
+        "Twitter",
+        "Other"
+      ]
+    },
+    "SocialID": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

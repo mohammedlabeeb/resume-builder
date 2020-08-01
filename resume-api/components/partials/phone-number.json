@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_partials_phone_numbers",
+  "info": {
+    "name": "PhoneNumber",
+    "icon": "phone-square"
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Mobile",
+        "Work",
+        "Home",
+        "Other"
+      ],
+      "required": true
+    },
+    "CountryCode": {
+      "type": "integer",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  }
+}

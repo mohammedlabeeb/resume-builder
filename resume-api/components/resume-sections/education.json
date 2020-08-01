@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_resume_sections_educations",
+  "info": {
+    "name": "Education",
+    "icon": "book-open"
+  },
+  "options": {},
+  "attributes": {
+    "CourseName": {
+      "type": "string",
+      "required": true
+    },
+    "Major": {
+      "type": "string"
+    },
+    "Institution": {
+      "type": "string"
+    },
+    "University": {
+      "type": "string"
+    },
+    "IsCurrent": {
+      "type": "boolean",
+      "default": false
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "MoreInfo": {
+      "type": "richtext"
+    },
+    "Certificates": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Awards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partials.awards"
+    }
+  }
+}

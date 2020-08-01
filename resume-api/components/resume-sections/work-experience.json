@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_resume_sections_work_experiences",
+  "info": {
+    "name": "WorkExperience",
+    "icon": "building"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "CompanyName": {
+      "type": "string"
+    },
+    "IsCurrent": {
+      "type": "boolean",
+      "default": false
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "OtherInfo": {
+      "type": "richtext"
+    },
+    "Awards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partials.awards"
+    }
+  }
+}

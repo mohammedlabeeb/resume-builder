@@ -1,0 +1,16 @@
+@mixin snackbar-theme($theme) {
+    $warn: map-get($theme, warn);
+
+    .snack-success {
+        background-color: green;
+    }
+    .snack-error {
+        background-color: mat-color($warn);
+    }
+    .snack-warning {
+        background-color: orange;
+    }
+    .snack-info {
+        background-color: #039be5;
+    }
+}

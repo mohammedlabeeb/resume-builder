@@ -1,0 +1,12 @@
+// Import Fuse core library
+@import "@fuse/scss/core";
+
+// Import app.theme.scss
+@import "app/app.theme";
+
+//Overwirte Styles
+
+.narrow-tab .mat-tab-label {
+    padding: 0 6px !important;
+    min-width: 0 !important;
+}

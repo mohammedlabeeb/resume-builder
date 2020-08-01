@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_partials_skills",
+  "info": {
+    "name": "Skills",
+    "icon": "skiing"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Strength": {
+      "type": "integer",
+      "default": 80,
+      "max": 100,
+      "min": 0
+    }
+  }
+}

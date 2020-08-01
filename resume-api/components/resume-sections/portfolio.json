@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_resume_sections_portfolios",
+  "info": {
+    "name": "Portfolio",
+    "icon": "passport"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "Images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Tags": {
+      "type": "json"
+    }
+  }
+}

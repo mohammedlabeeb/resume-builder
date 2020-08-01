@@ -1,0 +1,57 @@
+<div class="image-cropper-toolbox">
+    <button mat-icon-button (click)="rotateLeft()">
+        <mat-icon>rotate_left</mat-icon>
+    </button>
+    <button mat-icon-button (click)="rotateRight()">
+        <mat-icon>rotate_right</mat-icon>
+    </button>
+    <button mat-icon-button (click)="flipHorizontal()">
+        <mat-icon>flip</mat-icon>
+    </button>
+    <button mat-icon-button (click)="flipVertical()">
+        <mat-icon>flip</mat-icon>
+    </button>
+    <button mat-icon-button (click)="toggleContainWithinAspectRatio()">
+        <mat-icon>{{
+            containWithinAspectRatio ? "fullscreen" : "aspect_ratio"
+        }}</mat-icon>
+    </button>
+    <button mat-icon-button (click)="resetImage()">
+        <mat-icon>restore</mat-icon>
+    </button>
+</div>
+<input type="file" (change)="fileChangeEvent($event)" />
+<input
+    [(ngModel)]="rotation"
+    placeholder="Rotation"
+    type="number"
+    (keyup)="updateRotation()"
+/>
+<button (click)="zoomOut()">Zoom -</button>
+<button (click)="zoomIn()">Zoom +</button>
+
+<div>
+    <image-cropper
+        [imageChangedEvent]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [containWithinAspectRatio]="containWithinAspectRatio"
+        [aspectRatio]="4 / 3"
+        [resizeToWidth]="256"
+        [cropperMinWidth]="128"
+        [onlyScaleDown]="true"
+        [roundCropper]="false"
+        [canvasRotation]="canvasRotation"
+        [transform]="transform"
+        [alignImage]="'left'"
+        [style.display]="showCropper ? null : 'none'"
+        format="png"
+        (imageCropped)="imageCropped($event)"
+        (imageLoaded)="imageLoaded()"
+        (cropperReady)="cropperReady($event)"
+        (loadImageFailed)="loadImageFailed()"
+    ></image-cropper>
+</div>
+<img
+    [src]="croppedImage"
+    [style.border]="croppedImage ? '1px solid black' : 'none'"
+/>

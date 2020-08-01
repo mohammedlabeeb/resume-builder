@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_partials_emails",
+  "info": {
+    "name": "Email",
+    "icon": "mail-bulk"
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Personal",
+        "Work",
+        "Other"
+      ],
+      "required": true,
+      "default": "Personal"
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_resume_sections_profiles",
+  "info": {
+    "name": "Profile",
+    "icon": "user-tie"
+  },
+  "options": {},
+  "attributes": {
+    "FullName": {
+      "type": "string",
+      "required": true
+    },
+    "Avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "DateOfBirth": {
+      "type": "date",
+      "required": true,
+      "private": false
+    },
+    "Email": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partials.email"
+    },
+    "Phone": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partials.phone-number"
+    },
+    "Address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partials.address"
+    },
+    "OnlineProfiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partials.online-profiles"
+    }
+  }
+}
